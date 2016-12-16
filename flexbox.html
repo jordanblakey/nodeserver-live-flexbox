@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World</title>
+  <style media="screen">
+    @media(min-width:768px){
+      .container-1 {
+        display: flex;
+        font-family: sans-serif;
+        /*align-items: flex-start;
+        align-items: flex-end;
+        align-items: stretch;
+        align-items: center;*/
+        /*flex-direction: row;*/
+      }
+
+      .container-2 {
+        display: flex;
+        font-family: sans-serif;
+        /*justify-content: space-around;*/
+        /*justify-content: flex-start;*/
+        /*justify-content: center;*/
+        /*justify-content: flex-end;*/
+        justify-content: space-around;
+      }
+    }
+
+    .container-2-box {
+      flex-basis:  20%;
+    }
+
+    .container-3{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .container-3-box {
+      flex: 1;
+    }
+
+    .container-1 div, .container-2 div, .container-3 div{
+      border: 1px #ccc solid;
+      padding:10px;
+    }
+
+    .box-1 {
+      flex: 2;
+      order: 2;
+    }
+
+    .box-2 {
+      flex: 1;
+      order: 1;
+    }
+
+    .box-3 {
+      flex: 1;
+      order: 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-1">
+    <div class="box-1">
+      <h3>Flexbox Parent Attributes and Properties</h3>
+      <code>.item  {
+      order: &lt;integer&gt;;
+      flex-grow: &lt;number&gt;; *default 0*
+      flex-shrink: &lt;number&gt;; *default 1*
+      flex-basis: &lt;length&gt; | auto; *default auto*
+      flex: none | [ &lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt; ];
+      align-self: auto | flex-start | flex-end | center | baseline | stretch;
+    }</code>
+    </div>
+    <div class="box-2">
+      <h3>Flexbox Children Attributes &amp; Properties</h3>
+      <code>.container  {
+        display: flex; *or inline-flex*
+        flex-direction: row | row-reverse | column | column-reverse;
+        flex-wrap: nowrap | wrap | wrap-reverse;
+        flex-flow: &lt;‘flex-direction’&gt; || &lt;‘flex-wrap’&gt;
+        justify-content: flex-start | flex-end | center | space-between | space-around;
+        align-items: flex-start | flex-end | center | baseline | stretch;
+        align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+      }</code>
+    </div>
+    <div class="box-3">
+      <h3>CSS3 calc() Use Cases</h3>
+      <code>div {
+        font-size: calc(3em + 5px); *combine units*
+        padding: calc(1vmax + -1vmin); *useful for defining relative to viewport, for example fluid text sizes*
+        transform: rotate(calc(1turn - 32deg)); *radian calculations, calc within other CSS functions*
+        background: hsl(180, calc(2*25%), 65%); *calc color values. Read: relative colors*
+        line-height: calc(8/3); *don't have to do the math*
+        width: calc(23vmin - 2*3rem);} *don't understand this one*
+      }</code>
+    </div>
+  </div>
+
+  <div class="container-2">
+    <div class="container-2-box">
+      <h3>Object-Fit &amp; Object-Position Properties</h3>
+      <code>img.object-fit {
+        object-fit: fill | contain | cover | none | scale-down; *fill: stretch to fill. contain: letterbox. cover: constrain and fill. * /
+        object-position: 50% 50%; *default value: image is centere*
+        object-position: 0 0; *positioned top left of the content box*
+        }
+      </code>
+    </div>
+    <div class="container-2-box">
+      <h3>Transition Timing Function in CSS</h3>
+      <code>* {transition-timing-function: ease | ease-in | ease-out |ease-in-out | linear | step-start | step-end | steps(4, end) | cubic-bezier(0.1, 0.7, 1.0, 0.1);}</code>
+    </div>
+    <div class="container-2-box">
+      <h3>Box 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, maiores.</p>
+    </div>
+  </div>
+
+  <div class="container-3">
+    <div class="container-3-box">
+      <h3>Box 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque?</p>
+    </div>
+    <div class="container-3-box">
+      <h3>Box 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, aspernatur.</p>
+    </div>
+    <div class="container-3-box">
+      <h3>Box 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, maiores.</p>
+    </div>
+    <div class="container-3-box">
+      <h3>Box 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, atque?</p>
+    </div>
+    <div class="container-3-box">
+      <h3>Box 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, aspernatur.</p>
+    </div>
+    <div class="container-3-box">
+      <h3>Box 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, maiores.</p>
+    </div>
+  </div>
+
+</body>
+</html>
